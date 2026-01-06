@@ -8,8 +8,8 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ navigate }) => {
   return (
-    <footer id="contact" className="bg-dark-900 pt-20 pb-10 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer id="contact" className="bg-dark-900 pt-20 pb-10 overflow-hidden relative">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
           <div className="max-w-xl">
             <div className="flex items-center gap-2 mb-6 text-brand">
@@ -51,13 +51,13 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
             SYSTEM STATUS: OPTIMAL
           </div>
         </div>
+      </div>
         
-        {/* Large Stylized Branding */}
-        <div className="mt-16 select-none pointer-events-none">
-          <h1 className="text-[15vw] leading-none font-black text-center tracking-tighter text-stroke opacity-10 hover:opacity-20 transition-all duration-700 hover:text-brand/5">
-            SOLARSTREAM
-          </h1>
-        </div>
+      {/* Large Stylized Branding */}
+      <div className="mt-16 w-full flex justify-center select-none pointer-events-none">
+        <h1 className="text-[12vw] leading-none font-black text-center tracking-tighter text-stroke opacity-10 whitespace-nowrap hover:opacity-20 transition-all duration-700 hover:text-brand/5">
+          SOLARSTREAM
+        </h1>
       </div>
     </footer>
   );
